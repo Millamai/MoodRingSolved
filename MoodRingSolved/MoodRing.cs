@@ -32,7 +32,8 @@ namespace MoodRingSolved
         public Moods FindMyMood() {
             Type type = typeof(Moods);
             Array values = type.GetEnumValues();
-            return (Moods)values.GetValue(rnd.Next(values.Length));
+            Mood = (Moods)values.GetValue(rnd.Next(values.Length));
+            return Mood;
         }
     }
 }
